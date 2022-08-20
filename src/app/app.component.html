@@ -1,33 +1,13 @@
-<h2>hola muno</h2>
-
-<p>{{ apellido }}</p>
-<p>{{ edad }}</p>
-
-<h2>{{ sumar(5, 4) }}</h2>
-
-{{ frutas }}
-
-<hr />
-
-<div *ngFor="let item of frutas">
-  <h1>{{ item }}</h1>
-</div>
-
-<hr />
-
-<div *ngIf="edad > 18">si puede entrar</div>
-
-<hr />
-
-<p>
-  <ng-template *ngIf="edad > 18; else pepe">es mayor de edad</ng-template>
-  <ng-template #pepe>es menor de edad</ng-template>
-</p>
-
-<hr />
-
-<h1>
-  <ng-template *ngIf="edad > 18; then maria; else mario"></ng-template>
-  <ng-template #maria>es mayor de edad</ng-template>
-  <ng-template #mario>es menor de edad</ng-template>
-</h1>
+<header>
+  <h1>titulo</h1>
+  <div>
+    <a [routerLink]="['/']">inicio</a>
+    <a [routerLink]="['/contacto']">contacto</a>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <p>pie de pagina</p>
+</footer>
