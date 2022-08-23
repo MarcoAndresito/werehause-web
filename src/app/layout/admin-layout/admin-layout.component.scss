@@ -1,0 +1,18 @@
+div {
+  display: flex;
+  flex-direction: row;
+
+  .siderbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    align-items: stretch;
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  div{
+    background-color: #ccc;
+  }
+}
