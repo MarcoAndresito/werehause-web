@@ -1,12 +1,32 @@
-<div>
-  <div class="siderbar">
-    <a routerLink="/">Inicio</a>
-    <a routerLink="/productos">Listar Productos</a>
-    <a routerLink="/productos/formulario">Crear Producto</a>
-    <a routerLink="/productos/mostrar">Mostrar Producto</a>
-    <a routerLink="/contacto">Contacto</a>
-  </div>
-  <div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <div class="sidenav-menu">
+      <button mat-button routerLink="/">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Icono de Inicio"
+          fontIcon="home"></mat-icon>
+        Inicio
+      </button>
+      <button mat-button routerLink="/productos">
+        <mat-icon fontIcon="list"></mat-icon>
+        Listar Productos
+      </button>
+      <button mat-button routerLink="/productos/formulario">
+        <mat-icon>playlist_add</mat-icon>
+        Crear Producto
+      </button>
+      <button mat-button routerLink="/productos/mostrar">
+        <mat-icon>preview</mat-icon>
+        Mostrar Producto
+      </button>
+      <button mat-button routerLink="/contacto">
+        <mat-icon>contact_page</mat-icon>
+        Contacto
+      </button>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
     <router-outlet></router-outlet>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
