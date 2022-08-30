@@ -1,13 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav mode="side" opened>
     <div class="sidenav-menu">
-      <button mat-button routerLink="/">
-        <mat-icon
-          aria-hidden="false"
-          aria-label="Icono de Inicio"
-          fontIcon="home"></mat-icon>
-        Inicio
-      </button>
       <button mat-button routerLink="/productos">
         <mat-icon fontIcon="list"></mat-icon>
         Listar Productos
@@ -20,9 +13,9 @@
         <mat-icon>preview</mat-icon>
         Mostrar Producto
       </button>
-      <button mat-button routerLink="/contacto">
-        <mat-icon>contact_page</mat-icon>
-        Contacto
+      <button mat-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Cerrar sesion
       </button>
     </div>
   </mat-sidenav>
