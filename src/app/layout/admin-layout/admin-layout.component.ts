@@ -10,7 +10,7 @@ export class AdminLayoutComponent {
   constructor(private router: Router) {}
 
   logout() {
-    document.cookie = `token=`;
+    localStorage.clear();
     this.router.navigate(['/']);
   }
 }

@@ -1,4 +1,4 @@
-<div>
+<div style="padding: 50px">
   <h1>Pagina de listar productos</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio maiores
@@ -18,4 +18,21 @@
     sapiente ex! Vero numquam neque totam minima beatae eius architecto vitae
     autem!
   </p>
+  <button mat-raised-button color="primary" (click)="mostrarProductos()">
+    Mostrar Productos
+  </button>
+  <div style="margin: 50px" class="mat-elevation-z8">
+    <table style="width: 100%; border: 1px solid #000">
+      <tr>
+        <th>nombre</th>
+        <th>precio</th>
+        <th>cantidad</th>
+      </tr>
+      <tr *ngFor="let item of products">
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.stock }}</td>
+      </tr>
+    </table>
+  </div>
 </div>

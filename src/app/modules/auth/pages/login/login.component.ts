@@ -21,7 +21,7 @@ export class LoginComponent {
   login() {
     this.authService.getToken(this.username, this.password).subscribe({
       next: (value: any) => {
-        document.cookie = `token=${value.access_token}`;
+        localStorage.setItem('token', value.access_token);
         this.router.navigate(['/productos']);
       },
     });

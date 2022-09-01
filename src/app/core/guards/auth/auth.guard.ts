@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-    let token = document.cookie.split('=')[1];
+    let token = localStorage.getItem('token');
     return token ? true : false;
   }
 }
