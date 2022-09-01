@@ -1,3 +1,9 @@
+:host {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+}
+
 header {
   display: flex;
   flex-direction: row;

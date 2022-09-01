@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav #menuLeft mode="side" opened>
     <div class="sidenav-menu">
       <button mat-button routerLink="/productos">
         <mat-icon fontIcon="list"></mat-icon>
@@ -20,6 +20,12 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button aria-label="Menu" (click)="menuLeft.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My App</span>
+    </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
