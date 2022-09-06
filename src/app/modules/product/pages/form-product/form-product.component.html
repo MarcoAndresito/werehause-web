@@ -1,21 +1,27 @@
-<div>
-  <h1>Pagina de formulario para crear o editar producto</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio maiores
-    recusandae, et reprehenderit consequuntur laborum blanditiis numquam
-    sapiente ex! Vero numquam neque totam minima beatae eius architecto vitae
-    autem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio maiores
-    recusandae, et reprehenderit consequuntur laborum blanditiis numquam
-    sapiente ex! Vero numquam neque totam minima beatae eius architecto vitae
-    autem!
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut optio maiores
-    recusandae, et reprehenderit consequuntur laborum blanditiis numquam
-    sapiente ex! Vero numquam neque totam minima beatae eius architecto vitae
-    autem!
-  </p>
-</div>
+<mat-card class="my-card">
+  <mat-card-title>Nuevo</mat-card-title>
+  <mat-card-subtitle>Producto</mat-card-subtitle>
+  <mat-card-content class="my-content">
+    <mat-form-field appearance="fill">
+      <mat-label> Nombre: </mat-label>
+      <input matInput type="text" [(ngModel)]="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label> Precio: </mat-label>
+      <input matInput type="number" [(ngModel)]="price" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label> Cantidad: </mat-label>
+      <input matInput type="number" [(ngModel)]="stock" />
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="save()">Guardar</button>
+    <button mat-button (click)="clear()">Limpiar</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar *ngIf="isLoad" mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
