@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -21,6 +22,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCardModule,
     MatTableModule,
     MatProgressBarModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule {}
